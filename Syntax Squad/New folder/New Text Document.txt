@@ -1,0 +1,32 @@
+Create a responsive, visually appealing website with a purple gradient theme. The website should include the following:
+
+1. Navbar
+Left-aligned logo.
+Three buttons centered: Home, About, Services.
+A "Contact Us" button on the far right in a pill-shaped style with a light purple gradient background.
+2. Hero Section
+Use the provided image (1st background) as the background image.
+Add a centered heading: "Presented by".
+Below the heading, include a pill-shaped button labeled "BUDS xSuperComp".
+3. Carousel Section
+Below the hero section, add a carousel with 5 images.
+The images should enlarge on hover.
+4. Partners Section
+Use a purple gradient background.
+Center-align the main heading: "Our Partners".
+Add a horizontally scrolling carousel with 10 placeholder logos (editable later).
+5. Steps to Follow Section
+Add some space below the partners section.
+Center-align a heading: "Steps to Follow", with a purple gradient background.
+Include four cards: each containing a GIF, a heading, and some sample text.
+6. Competitions Section
+Center-align the main heading: "Competitions".
+Below it, add three cards. Each card should have:
+A half-card-sized image (to be provided).
+A text area.
+7. Footer
+Add a footer similar to the navbar with sample links like Home, About, Services, Contact.
+Additional Requirements
+Ensure all main section headings are below the sections they introduce.
+Maintain a modern, polished UI with a consistent purple gradient theme.
+Make the website fully responsive.

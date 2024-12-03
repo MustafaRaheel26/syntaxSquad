@@ -1,0 +1,264 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  background: url('./assets/img/1st\ bg.jpg') no-repeat center center fixed; /* Adding the background image */
+  background-size: cover; /* Ensures the image covers the entire viewport */
+  color: #FFFFFF;
+  scroll-behavior: smooth;
+  background-image: url("1st\ bg.jpg");
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem ;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar img {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar div a{
+  text-decoration: none;
+  color: #730aa3;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+#button{
+  background-color: #FFB81C;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* Hero Section with Animation */
+
+/* Animated Text Styles */
+/* Animated Heading Styles */
+.animated-heading {
+  position: relative;
+  height: 3rem; /* Adjust height to match your font size */
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.animated-heading .heading {
+  position: absolute;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #E59CFF;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: headingSequence 6s infinite;
+}
+
+/* Timing for each word */
+.animated-heading .published {
+  animation-delay: 0s;
+}
+
+.animated-heading .organized {
+  animation-delay: 3s;
+}
+
+/* Keyframes for the heading sequence */
+@keyframes headingSequence {
+  0%, 15% {
+    opacity: 1;
+    transform: translateX(0); /* Fully visible in the center */
+  }
+  25% {
+    opacity: 1;
+    transform: translateX(100%); /* Move out to the right */
+  }
+  30%, 45% {
+    opacity: 0;
+    transform: translateX(-100%); /* Hidden and reset position */
+  }
+  50%, 65% {
+    opacity: 1;
+    transform: translateX(0); /* Fully visible in the center */
+  }
+  75% {
+    opacity: 1;
+    transform: translateX(100%); /* Move out to the right */
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%); /* Hidden and reset position */
+  }
+}
+
+
+/* Keyframes for Merge and Demerge */
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  10%, 40% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(50%);
+  }
+  60%, 90% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+#events {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 1rem;
+
+}
+
+.card {
+  flex: 0 0 18rem; /* Ensures each card is 18rem wide */
+  border: 2px solid #8a2be2; /* Purple theme */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 12rem; /* Fixed height for consistency */
+  object-fit: cover;
+  border-bottom: 2px solid #8a2be2; /* Matches theme */
+}
+
+.card-body {
+  text-align: center;
+  padding: 1rem;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  color: plum;
+  background-color: none;
+  text-decoration: none;
+}
+
+.btn {
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  color: antiquewhite;
+}
+
+#events:hover .card {
+  animation: slide 3s infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+
+#hero {
+  padding: 6rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(3, 0, 20, 0.9));
+  z-index: 1;
+}
+
+#hero h1 {
+  font-size: 2.5rem;
+  color: #E59CFF;
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 2s ease-in-out;
+}
+
+#hero p {
+  color: #BA9CFF;
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 3s ease-in-out;
+}
+
+/* Section Styles */
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid #7038FA;
+  color: #EFEDFD;
+  background-color: rgba(0, 0, 0, 0.6); /* Add transparency to enhance readability */
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #7038FA;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 1rem 0;
+}
